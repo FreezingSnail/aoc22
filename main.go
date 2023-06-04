@@ -4,6 +4,7 @@ import (
 	cal "aoc/day1"
 	rps "aoc/day2"
 	rucksack "aoc/day3"
+	camp "aoc/day4"
 	"fmt"
 	"os"
 )
@@ -37,6 +38,13 @@ func day3() {
 	fmt.Println("Group Priorities: ", groupPriorities)
 }
 
+func day4() {
+	contains := camp.FindContainedAssignments(os.Args[1])
+	fmt.Println("contained assignments: ", contains)
+	overlaps := camp.FindOverlapedAssignments(os.Args[1])
+	fmt.Println("contained assignments: ", overlaps)
+}
+
 func main() {
-	day3()
+	day4()
 }
