@@ -3,6 +3,7 @@ package main
 import (
 	cal "aoc/day1"
 	rps "aoc/day2"
+	rucksack "aoc/day3"
 	"fmt"
 	"os"
 )
@@ -24,11 +25,18 @@ func day1() {
 
 func day2() {
 	score := rps.RpsScore(os.Args[1])
-	fmt.Println("Most Calories: ", score)
+	fmt.Println("score: ", score)
 	score = rps.RpsScore2(os.Args[1])
-	fmt.Println("Most Calories: ", score)
+	fmt.Println("score: ", score)
+}
+
+func day3() {
+	sumPriority := rucksack.SumPrioritys(os.Args[1])
+	fmt.Println("Priorities: ", sumPriority)
+	groupPriorities := rucksack.SumGroupPriorities(os.Args[1])
+	fmt.Println("Group Priorities: ", groupPriorities)
 }
 
 func main() {
-	day2()
+	day3()
 }
